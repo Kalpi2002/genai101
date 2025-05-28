@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Fun Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #fact-box {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 60%;
+        }
+
+        button {
+            background-color: #4caf50;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>🐾 Cat Fun Facts</h1>
+    <div id="fact-box">
+        <p id="fact">Click the button to discover a fun cat fact!</p>
+    </div>
+    <button onclick="generateFact()">Generate Another Fun Fact</button>
+
+    <script>
+        const facts = [
+            "Cats are crepuscular, which means they are most active during dawn and dusk.",
+            "A cat's nose print is unique, just like a human fingerprint.",
+            "Cats can jump up to six times their height.",
+            "The average cat sleeps for about 12–16 hours a day.",
+            "Cats have a third eyelid, called a nictitating membrane, that helps protect their eyes.",
+            "A group of cats is called a clowder.",
+            "Cats can make over 100 different vocalizations, while dogs can only make about 10.",
+            "The oldest known cat lived to be 38 years old.",
+            "Cats use their whiskers to help them navigate and sense their environment.",
+            "Cats have a specialized 'purr box' in their throat that can vibrate at a variety of frequencies, and it's believed this can promote healing."
+        ];
+
+        function generateFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById("fact").innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
